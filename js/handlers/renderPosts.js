@@ -32,7 +32,7 @@ export function renderPosts(posts, container) {
       const image = document.createElement("img");
 
       image.src = post.media.url;
-      image.alt = post.media.alt || post.tilte || "Post image";
+      image.alt = post.media.alt || post.title || "Post image";
 
       image.addEventListener("error", function () {
         image.remove();

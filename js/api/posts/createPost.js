@@ -1,6 +1,5 @@
 import { API_BASE_URL, API_KEY } from "../../utils/constants.js";
 
-
 /**
  * Creates a new social media post.
  * @param {Object} post - The Post data to create
@@ -18,7 +17,7 @@ export async function createPost(post) {
     headers: {
       Authorization: `Bearer ${accessToken}`,
       "X-Noroff-API-Key": API_KEY,
-      "Content-Type": "Application/json",
+      "Content-Type": "application/json",
     },
     body: JSON.stringify(post),
   });

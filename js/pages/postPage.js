@@ -74,14 +74,29 @@ export function initPostPage() {
     titleInput.type = "text";
     titleInput.value = post.title || "";
 
+    const titleLabel = document.createElement("label");
+    titleLabel.textContent = "Title";
+    titleLabel.htmlFor = "edit-title";
+
+    titleInput.id = "edit-title";
+    titleInput.required = true;
+
     const bodyInput = document.createElement("textarea");
     bodyInput.value = post.body || "";
+
+    const bodyLabel = document.createElement("label");
+    bodyLabel.textContent = "Body";
+    bodyLabel.htmlFor = "edit-body";
+
+    bodyInput.id = "edit-body";
 
     const submitButton = document.createElement("button");
     submitButton.type = "submit";
     submitButton.textContent = "Save changes";
 
+    form.appendChild(titleLabel);
     form.appendChild(titleInput);
+    form.appendChild(bodyLabel);
     form.appendChild(bodyInput);
     form.appendChild(submitButton);
 

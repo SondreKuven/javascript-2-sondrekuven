@@ -6,13 +6,14 @@ The application allows users to register, log in, view posts, create posts, edit
 
 ## Features
 
-- Regiser a new user
+- Register a new user
 - Log in
 - View all posts
 - View a single post
 - Create a post
 - Edit own posts
 - Delete own posts
+- View own profile
 - View other users' profiles and posts
 - Follow and unfollow users
 - Search posts
@@ -27,7 +28,7 @@ The application allows users to register, log in, view posts, create posts, edit
 
 ## Running the Project
 
-1. Clone the respository.
+1. Clone the repository.
 2. Open the project in VS code.
 3. Run the project using Live server or another local development server.
 4. Open `index.html` in the browser.
@@ -38,14 +39,14 @@ This project uses the Noroff API v2:
 
 https://docs.noroff.dev/docs/v2
 
-Authenticated requests require a Noroff API key and an acces token.
+Authenticated requests require a Noroff API key and an access token.
 
 ## Project Structure
 
 ```text
 js/
 |-- api/
-|-- handler/
+|-- handlers/
 |-- pages/
 |-- utils/
 |-- main.js
