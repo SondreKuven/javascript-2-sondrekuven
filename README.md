@@ -17,8 +17,8 @@ The application allows users to register, log in, view posts, create posts, edit
 - Follow and unfollow users
 - Search posts
 
-
 ## Built With
+
 - HTML
 - CSS
 - JavaScript
@@ -49,3 +49,8 @@ js/
 |-- pages/
 |-- utils/
 |-- main.js
+```
+
+## Deployment
+
+https://sondrekuven.github.io/javascript-2-sondrekuven/index.html
