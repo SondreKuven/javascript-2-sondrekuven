@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Feed</title>
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <nav>
+      <a href="./profile.html">My Profile</a>
+      <a href="./feed.html">Feed</a>
+      <button id="logout-button">Logout</button>
+    </nav>
+    <h1>Feed</h1>
+    <form id="search-form">
+      <label for="search-input">Search posts</label>
+      <input type="search" id="search-input" placeholder="Search posts..." />
+      <button type="submit">Search</button>
+    </form>
+    <form id="create-post-form">
+      <div>
+        <label for="post-title">Title</label>
+        <input type="text" id="post-title" required />
+      </div>
+      <div>
+        <label for="post-body">Body</label>
+        <textarea id="post-body"></textarea>
+      </div>
+      <div>
+        <label for="post-image">Image URL</label>
+        <input type="url" id="post-image" />
+      </div>
+      <button type="submit">Create post</button>
+    </form>
+    <p id="create-post-message"></p>
+    <main id="posts-container">
+      <p>Loading posts...</p>
+    </main>
+    <script type="module" src="./js/main.js"></script>
+  </body>
+</html>
