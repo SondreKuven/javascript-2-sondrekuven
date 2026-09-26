@@ -59,28 +59,28 @@ export function initFeedPage() {
       }
     });
   }
-}
 
-const searchForm = document.querySelector("#search-form");
+  const searchForm = document.querySelector("#search-form");
 
-if (searchForm) {
-  searchForm.addEventListener("submit", async function (e) {
-    e.preventDefault();
+  if (searchForm) {
+    searchForm.addEventListener("submit", async function (e) {
+      e.preventDefault();
 
-    const searchInput = document.querySelector("#search-input");
-    const query = searchInput.value.trim();
+      const searchInput = document.querySelector("#search-input");
+      const query = searchInput.value.trim();
 
-    try {
-      if (!query) {
-        await loadPosts();
-        return;
+      try {
+        if (!query) {
+          await loadPosts();
+          return;
+        }
+
+        const result = await searchPosts(query);
+
+        renderPosts(result.data, postsContainer);
+      } catch (error) {
+        console.error(error);
       }
-
-      const result = await searchPosts(query);
-
-      renderPosts(result.data, postsContainer);
-    } catch (error) {
-      console.error(error);
-    }
-  });
+    });
+  }
 }
