@@ -5,12 +5,6 @@ import { initFeedPage } from "./pages/feedPage.js";
 import { initPostPage } from "./pages/postPage.js";
 import { initProfilePage } from "./pages/profilePage.js";
 
-initRegisterPage();
-initLoginPage();
-initFeedPage();
-initPostPage();
-initProfilePage();
-
 const logoutButton = document.querySelector("#logout-button");
 
 if (logoutButton) {
@@ -25,6 +19,12 @@ if (logoutButton) {
 const protectedPage =
   document.querySelector("#posts-container") || document.querySelector("#post-container") || document.querySelector("#profile-container");
 
-if (protectedPage) {
-  requireLogin();
+const canLoadPage = !protectedPage || requireLogin();
+
+if (canLoadPage) {
+  initRegisterPage();
+  initLoginPage();
+  initFeedPage();
+  initPostPage();
+  initProfilePage();
 }

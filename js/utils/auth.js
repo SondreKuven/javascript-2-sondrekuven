@@ -3,5 +3,8 @@ export function requireLogin() {
 
   if (!accessToken) {
     window.location.href = "./index.html";
+    return false;
   }
+
+  return true;
 }
