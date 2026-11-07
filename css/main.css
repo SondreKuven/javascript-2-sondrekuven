@@ -11864,4 +11864,19 @@ textarea.form-control-lg {
   border-radius: 12px;
 }
 
+.post-card {
+  border-radius: 12px;
+}
+.post-card .card-body {
+  padding: 1.5rem;
+}
+.post-card .post-image {
+  display: block;
+  width: calc(100% - 2rem);
+  max-height: 260px;
+  object-fit: cover;
+  margin: 0 1rem 1rem;
+  border-radius: 8px;
+}
+
 /*# sourceMappingURL=main.css.map */
