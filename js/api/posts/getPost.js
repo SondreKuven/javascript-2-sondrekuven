@@ -1,6 +1,5 @@
 import { API_BASE_URL, API_KEY } from "../../utils/constants.js";
 
-
 /**
  * Fetches one post from the API using its ID.
  * @param {string|number} id - The ID of the post to retreive.
