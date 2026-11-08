@@ -1,0 +1,29 @@
+{
+  "name": "javascript-2-sondrekuven",
+  "version": "1.0.0",
+  "description": "This project is a front-end social media application built with vanilla JavaScript and the Noroff API.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "sass --watch scss/main.scss css/main.css",
+    "build": "sass --style=compressed --no-source-map scss/main.scss css/main.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SondreKuven/javascript-2-sondrekuven.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/SondreKuven/javascript-2-sondrekuven/issues"
+  },
+  "homepage": "https://github.com/SondreKuven/javascript-2-sondrekuven#readme",
+  "dependencies": {
+    "bootstrap": "^5.3.8"
+  },
+  "devDependencies": {
+    "sass": "^1.108.1"
+  }
+}

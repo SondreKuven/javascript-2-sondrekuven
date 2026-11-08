@@ -4,18 +4,29 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Post</title>
-    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/main.css" />
   </head>
-  <body>
-    <nav>
-      <a href="./profile.html">My Profile</a>
-      <a href="./feed.html">Feed</a>
-      <button id="logout-button">Logout</button>
-    </nav>
-    <main id="post-container">
-      <p>Loading post...</p>
-    </main>
+  <body class="bg-body-tertiary">
+    <nav class="navbar navbar-dark bg-dark" data-bs-theme="dark">
+      <div class="container d-flex flex-wrap gap-3">
+        <a class="navbar-brand" href="./feed.html">Social App</a>
 
+        <div class="d-flex align-items-center gap-3">
+          <a class="nav-link text-white active" href="./feed.html" aria-current="page">Feed</a>
+          <a class="nav-link text-white" href="./profile.html">My Profile</a>
+          <button id="logout-button" type="button" class="btn btn-outline-light btn-sm">Logout</button>
+        </div>
+      </div>
+    </nav>
+    <main class="container py-5">
+      <div class="post-detail mx-auto">
+        <a href="./feed.html" class="d-inline-block mb4 text-decoration-none">&larr; Back to feed</a>
+
+        <div id="post-container">
+          <p>Loading post...</p>
+        </div>
+      </div>
+    </main>
     <script type="module" src="./js/main.js"></script>
   </body>
 </html>

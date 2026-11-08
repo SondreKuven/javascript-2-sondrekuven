@@ -4,38 +4,68 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Feed</title>
-    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/main.css" />
   </head>
-  <body>
-    <nav>
-      <a href="./profile.html">My Profile</a>
-      <a href="./feed.html">Feed</a>
-      <button id="logout-button">Logout</button>
+  <body class="bg-body-tertiary">
+    <nav class="navbar navbar-dark bg-dark" data-bs-theme="dark">
+      <div class="container d-flex flex-wrap gap-3">
+        <a class="navbar-brand" href="./feed.html">Social App</a>
+
+        <div class="d-flex align-items-center gap-3">
+          <a class="nav-link text-white active" href="./feed.html" aria-current="page">Feed</a>
+          <a class="nav-link text-white" href="./profile.html">My Profile</a>
+          <button id="logout-button" type="button" class="btn btn-outline-light btn-sm">Logout</button>
+        </div>
+      </div>
     </nav>
-    <h1>Feed</h1>
-    <form id="search-form">
-      <label for="search-input">Search posts</label>
-      <input type="search" id="search-input" placeholder="Search posts..." />
-      <button type="submit">Search</button>
-    </form>
-    <form id="create-post-form">
-      <div>
-        <label for="post-title">Title</label>
-        <input type="text" id="post-title" required />
+    <main class="container py-5">
+      <h1 class="mb-4">Feed</h1>
+      <div class="row g-4 justify-content-center">
+        <div class="col-lg-4 col-xl-3">
+          <section class="card shadow-sm border-0">
+            <div class="card-body p-4">
+              <h2 class="h4 mb-4">Create a post</h2>
+              <form id="create-post-form">
+                <div class="mb-3">
+                  <label for="post-title" class="form-label">Title</label>
+                  <input type="text" id="post-title" class="form-control" required />
+                </div>
+                <div class="mb-3">
+                  <label for="post-body" class="form-label">Body</label>
+                  <textarea id="post-body" class="form-control" rows="4"></textarea>
+                </div>
+                <div class="mb-4">
+                  <label for="post-image" class="form-label">Image URL</label>
+                  <input type="url" id="post-image" class="form-control" placeholder="https://example.com/image.jpg" />
+                </div>
+                <button type="submit" class="btn btn-primary w-100">Create post</button>
+              </form>
+              <p id="create-post-message" class="mt-3 mb-0 small" aria-live="polite"></p>
+            </div>
+          </section>
+        </div>
+
+        <div class="col-lg-7 col-xl-6">
+          <section class="card shadow-sm border-0 mb-4">
+            <div class="card-body p-4">
+              <h2 class="h4 mb-3">Search posts</h2>
+              <form id="search-form" class="row g-2">
+                <div class="col-sm">
+                  <label for="search-input" class="visually-hidden">Search posts</label>
+                  <input type="search" id="search-input" class="form-control" placeholder="Search posts..." />
+                </div>
+                <div class="col-sm-auto">
+                  <button class="btn btn-primary w-100" type="submit">Search</button>
+                </div>
+              </form>
+            </div>
+          </section>
+
+          <section id="posts-container" class="d-grid gap-3" aria-label="Posts">
+            <p>Loading posts...</p>
+          </section>
+        </div>
       </div>
-      <div>
-        <label for="post-body">Body</label>
-        <textarea id="post-body"></textarea>
-      </div>
-      <div>
-        <label for="post-image">Image URL</label>
-        <input type="url" id="post-image" />
-      </div>
-      <button type="submit">Create post</button>
-    </form>
-    <p id="create-post-message"></p>
-    <main id="posts-container">
-      <p>Loading posts...</p>
     </main>
     <script type="module" src="./js/main.js"></script>
   </body>
