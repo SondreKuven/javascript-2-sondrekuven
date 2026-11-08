@@ -11879,4 +11879,14 @@ textarea.form-control-lg {
   border-radius: 8px;
 }
 
+.post-detail {
+  max-width: 720px;
+}
+.post-detail .post-detail-image {
+  display: block;
+  width: 100%;
+  max-height: 450px;
+  object-fit: contain;
+}
+
 /*# sourceMappingURL=main.css.map */

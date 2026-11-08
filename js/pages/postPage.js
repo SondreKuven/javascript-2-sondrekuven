@@ -69,12 +69,15 @@ export function initPostPage() {
     postContainer.innerHTML = "";
 
     const form = document.createElement("form");
+    form.className = "card shadow-sm border-0 p-4";
 
     const titleInput = document.createElement("input");
+    titleInput.className = "form-control mb-3";
     titleInput.type = "text";
     titleInput.value = post.title || "";
 
     const titleLabel = document.createElement("label");
+    titleLabel.className = "form-label";
     titleLabel.textContent = "Title";
     titleLabel.htmlFor = "edit-title";
 
@@ -82,15 +85,19 @@ export function initPostPage() {
     titleInput.required = true;
 
     const bodyInput = document.createElement("textarea");
+    bodyInput.className = "form-control mb-4";
+    bodyInput.rows = 6
     bodyInput.value = post.body || "";
 
     const bodyLabel = document.createElement("label");
+    bodyLabel.className = "form-label";
     bodyLabel.textContent = "Body";
     bodyLabel.htmlFor = "edit-body";
 
     bodyInput.id = "edit-body";
 
     const submitButton = document.createElement("button");
+    submitButton.className = "btn btn-primary";
     submitButton.type = "submit";
     submitButton.textContent = "Save changes";
 
