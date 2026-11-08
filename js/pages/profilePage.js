@@ -47,8 +47,10 @@ export function initProfilePage() {
     });
 
     const button = document.createElement("button");
-
+    button.type = "button";
     button.textContent = isFollowing ? "Unfollow" : "Follow";
+
+    button.className = isFollowing ? "btn btn-outline-secondary mt-4" : "btn btn-primary mt-4";
 
     button.addEventListener("click", async function () {
       try {
